@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+<meta charset="gbk">
+<meta name="author" content="ningxuran"/>
+<meta name="description" 
+      content="三列布局，右侧定宽，左侧和中间按比例自适应"/>
+<title>layout6</title>
+<style type="text/css">
+	.content{
+	width:900px;
+	margin: 0 auto;
+	overflow:hidden;
+	}
+	.content.primary{
+	margin-right:320px;
+	display:in-line;
+	}
+	.content.secondary{
+	width:300px;
+	display:in-line;
+	}
+	.content.primary.primary{
+	width:40%;
+	}
+	.content.primary.secondary{
+	width:40%;
+	}
+</style>
+</head>
+<body>
+<div class ="content">
+
+<div class="primary">
+	<div class="primary">
+	<!-- the first content goes here-->
+	</div>
+
+	<div class="secondary">
+	<!-- the second content goes here-->
+	</div>
+</div>
+
+<div class="secondary">
+	<!-- the third content goes here-->
+</div>
+
+</div>
+</body>
+</html>

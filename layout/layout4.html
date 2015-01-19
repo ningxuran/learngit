@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+<meta charset="gbk">
+<meta name="author" content="ningxuran"/>
+<meta name="description" 
+      content="三列布局，左侧右侧定宽，中间自适应"/>
+
+<title>layout4</title>
+<style type="text/css">
+	.content{
+	width:900px;
+	margin: 0 auto;
+	overflow:hidden;
+	}
+	.content.primary{
+	width:300px;
+	float:left;
+	display:in-line;
+	}
+	.content.secondary{
+	margin-left:320px;
+	margin-right:320px;
+	display:in-line;
+	}
+	.content.tertiary{
+	width:300px;
+	float:right;
+	display:in-line;
+	}
+</style>
+</head>
+
+<body>
+<div class ="content">
+
+<div class="primary">
+<!-- the first content goes here-->
+</div>
+<div class="secondary">
+<!-- the second content goes here-->
+</div>
+<div class="tertiary">
+<!-- the third content goes here-->
+</div>
+</div>
+</body>
+</html>
