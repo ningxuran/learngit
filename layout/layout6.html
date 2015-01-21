@@ -7,36 +7,41 @@
       content="三列布局，右侧定宽，左侧和中间按比例自适应"/>
 <title>layout6</title>
 <style type="text/css">
-	.content{
-	width:900px;
-	margin: 0 auto;
-	overflow:hidden;
+	body{
+	margin:0 auto;
+    padding:0;
+	width:1000px;
 	}
-	.content.primary{
-	margin-right:320px;
-	display:in-line;
+	.secondary{
+	width:200px
+	height:300px;
+	float:right;
+	background:#888;
 	}
-	.content.secondary{
-	width:300px;
-	display:in-line;
+	.primary{
+	margin-right:220px;
 	}
-	.content.primary.primary{
-	width:40%;
+	#primary_one,#primary_two{
+	width:48%;
+	height:300px;
+	background:#F60;
 	}
-	.content.primary.secondary{
-	width:40%;
+	#primary_one{
+	float:left;
+	}
+	#primary_two{
+	float:right;
 	}
 </style>
 </head>
 <body>
-<div class ="content">
 
 <div class="primary">
-	<div class="primary">
+	<div id="primary_one">
 	<!-- the first content goes here-->
 	</div>
 
-	<div class="secondary">
+	<div id="primary_two">
 	<!-- the second content goes here-->
 	</div>
 </div>
@@ -45,6 +50,5 @@
 	<!-- the third content goes here-->
 </div>
 
-</div>
 </body>
 </html>

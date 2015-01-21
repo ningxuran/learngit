@@ -8,41 +8,46 @@
 
 <title>layout4</title>
 <style type="text/css">
-	.content{
-	width:900px;
-	margin: 0 auto;
-	overflow:hidden;
+    body{
+	margin:0 auto;
+    padding:0;
+	width:1000px;
 	}
-	.content.primary{
-	width:300px;
+	.primary,.tertiary{
+	width:200px;
+	height:300px;
+	background:#888;
+	}
+	.primary{
 	float:left;
-	display:in-line;
 	}
-	.content.secondary{
-	margin-left:320px;
-	margin-right:320px;
-	display:in-line;
+	secondary{
+	float:left;
+	width:100%;
 	}
-	.content.tertiary{
-	width:300px;
+	.secondary_body{
+	height:300px;
+	margin:0 220px;
+	background:#F60;
+	}
+	.tertiary{
 	float:right;
-	display:in-line;
 	}
 </style>
 </head>
 
 <body>
-<div class ="content">
-
 <div class="primary">
 <!-- the first content goes here-->
-</div>
-<div class="secondary">
-<!-- the second content goes here-->
 </div>
 <div class="tertiary">
 <!-- the third content goes here-->
 </div>
+<div class="secondary">
+<div class="secondary_body">
+<!-- the second content goes here-->
+</div>
+
 </div>
 </body>
 </html>
