@@ -1,0 +1,29 @@
+清除浮动
+清除浮动的方法可以分成两类：
+一是利用 clear 属性，包括在浮动元素末尾添加一个带有 clear: both 属性的空 div 来闭合元素；利用 :after 伪元素的方法也是在元素末尾添加一个内容为一个点并带有 clear: both 属性的元素实现的。
+二是触发浮动元素父元素的 BFC (Block Formatting Contexts, 块级格式化上下文)，使到该父元素可以包含浮动元素。
+策略
+在网页主要布局时使用:after伪元素方法并作为主要清理浮动方式；
+在小模块如ul里使用overflow:hidden;（留意可能产生的隐藏溢出元素问题）；
+如果本身就是浮动元素则可自动清除内部浮动，无需格外处理；
+正文中使用邻接元素清理之前的浮动。
+最后可以使用相对完美的:after伪元素方法清理浮动，文档结构更加清晰。
+
+使用CSS的:after伪元素：
+结合 :after 伪元素（注意这不是伪类，而是伪元素，代表一个元素之后最近的元素）和 IEhack ，可以完美兼容当前主流的各大浏览器，这里的 IEhack 指的是触发 hasLayout。
+/* 清理浮动 */    
+.clearfix:after     
+{    
+visibility:hidden;    
+display:block;    
+font-size:0;    
+content:".";    
+clear:both;    
+height:0;    
+}  
+.clearfix   
+{    
+zoom:1;    
+}  
+其原理是，在「高级」浏览器中使用 :after 伪类在浮动块后面加上一个非 display:none 的不可见块状内容来，并给它设置 clear:both 来清理浮动。在 ie6 和 7 中给浮动块添加 haslayout 来让浮动块撑高并正常影响文档流。
+本例中通过CSS伪元素在容器的内部元素最后添加了一个看不见的空格"020"或点"."，并且赋予clear属性来清除浮动。需要注意的是为了IE6和IE7浏览器，要给clearfix这个class添加一条zoom:1;触发haslayout。
