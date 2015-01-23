@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="ningxuran"/>
+<meta name="description" 
+      content="圆角矩形"/>
+
+<title>roundrect</title>
+<style type="text/css">
+* {
+font-size:12px;
+}
+.roundbox{
+position:relative;
+border:1px solid #3d9947;
+width:400px;
+padding:8px;
+line-height:22px;
+background-color:#d4d4d4;
+}
+.roundbox span{
+display:block;
+position:absolute;
+width:5px;
+height:5px;
+font-size:0;
+}
+.top_left{
+left:-1px;
+top:-1px;
+background:url(round.gif) top left;
+}
+.top_right{
+right:-1px;
+top:-1px;
+background:url(round.gif) top right;
+}
+.bottom_left {
+left:-1px;
+bottom:-1px;
+background:url(round.gif) bottom left;
+}
+.bottom_right {
+right:-1px;
+bottom:-1px;
+background:url(round.gif) bottom right;
+}
+</style>
+</head>
+<body>
+<div class="roundbox">
+ 
+<span class="top_left"></span>
+<span class="top_right"></span>
+<span class="bottom_left"></span>
+<span class="bottom_right"></span>
+这里是一个宽416px的圆角矩形，这里是一个宽416px的圆角矩形。
+</div>
+</body>
+</html>
