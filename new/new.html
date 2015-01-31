@@ -1,0 +1,454 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>hi ranranran</title>
+<meta name="author" content="ningxuran"/>
+<meta name="description" 
+      content="这是一个神奇的网站"/>
+
+
+<style type="text/css">
+    /*   layout    */
+    *{
+		margin: 0 auto;
+		padding: 0;
+		border: 0;
+	}
+	body{
+		font-family: '微软雅黑';
+		font-size: 12px;
+	}
+	.header{
+		z-index: 999999;
+		position: fixed;
+		top: 0;
+		border-bottom: 1px solid rgba(8,8,8,.2);
+		width: 100%;
+		height: 100px;
+		text-align: center;
+	}
+	.header-wrapper{
+		height: 100px;
+		background-color: #fff;
+	}
+	.main{
+		z-index: 1;
+		position: absolute;
+		top: 100px;
+		margin-left: 200px;
+	}
+	.maincon{
+		margin-right: 370px;
+	}
+	.subnav{
+		position: fixed;
+		top: 100px;
+		left: 0;
+		width: 170px;
+	}
+	.sidebar{
+		float: right;
+		width: 350px;
+	}
+	.footer{
+		width: 100%;
+		height: 30px;
+	}
+	
+	/* header */
+	.logo{
+	float: left;
+	width: 150px;
+	height: 100px;
+	background: url(logo.jpg);
+	}
+	.firstnav{
+	float: left;
+	margin-left: 20px;
+	display: inline;
+	width: 550px;
+	height: 100px;
+	}
+	.secondnav{
+	float: left;
+	margin: 10px 0;
+	display: inline;
+	width: 250px;
+	height: 70px;
+	}
+	.thirdnav{
+	float: right;
+	width: 100px;
+	height: 100px;
+	}
+	.search{
+	float: left;
+	width: 220px;
+	}
+	input{
+	margin: 34px 0;
+	height: 30px;
+	border: 1px solid #888;
+	}
+	.search-img{
+	opacity: 1;
+	}
+	.search-img:hover{
+	opacity: .7;
+	}
+	.firstnav li{
+	float: left;
+	display: block;
+	font-size: 25px;
+	list-style-type: none;
+	}
+	.secondnav li{
+	float: left;
+	margin: 8px 5px;
+	display: inline;
+	font-size: 10px;
+	list-style-type: none;
+	}
+	.thirdnav li{
+	float: left;
+	margin: 30px 0;
+	display: inline;
+	font-size: 10px;
+	list-style-type: none;
+	}
+	#a,#b,#c,#d,#e{
+	margin: 35px 8px;
+	width: 70px;
+	}
+	
+	/* link */
+	a{
+	color: #000;
+	text-decoration: none;
+	}
+	.firstnav a{
+	color: #888;
+	}
+	a:hover {
+	color: #ff0000;
+	}
+	.firstnav a:hover{
+	color: #ff0000;
+	}
+	.secondnav a:hover{
+	color: #000;
+	text-decoration: underline;
+	}
+	.logo:hover{
+	background: url(logo2.jpg);
+	}
+	td:hover{
+	color: #fff;
+	background-color: #ff0000;
+	}
+	
+	/* subnav */
+	.subnav-first li{
+	margin-top: 5px;
+	font-size: 20px;
+	list-style-type: none;
+	}
+	.subnav-first,.subnav-second{
+	margin: 20px;
+	padding: 10px;
+	border: 1px solid #888;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -ms-border-radius: 10px 10px 10px 10px;
+    -o-border-radius: 10px 10px 10px 10px;
+	}
+	.subnav-second p{
+	text-align: center;
+	word-break: break-all;}
+	}
+	
+	
+	/*   main   */
+    .maincon h1{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	}
+	h2{
+	margin: 10px;
+	}
+	.title{
+	height: 50px;
+	}
+	.con-img{
+	float: left;
+	margin: 5px;
+	display: inline;
+	width: 150px;
+	height: 150px;
+	}
+	.con-button{
+	float: right;
+	margin: 10px 0;
+	display: inline;
+	height: 30px;
+	opacity: .8;
+	}
+	.con-button:hover{
+	opacity: 1;
+	}
+	.con{
+	width: 100%;
+	height: 150px;
+	margin: 20px auto;
+	}	
+	
+	/*    sidebar   */
+	.side-img{
+	float: left;
+	margin: 5px;
+	display: inline;
+	width: 75px;
+	height: 75px;
+	}
+	.side-first a,.side-third a{
+	margin: 10px auto;
+	display: block;
+	width: 100%;
+	height: 85px;
+	}
+	.side-first,.side-second,.side-third{
+	margin: 10px;
+	padding: 5px;
+	border: 1px solid #888;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -ms-border-radius: 10px 10px 10px 10px;
+    -o-border-radius: 10px 10px 10px 10px;
+	}
+	table{
+	margin: 10px;
+	}
+	td{
+	width: 95px;
+	height: 30px;
+	font-size: 15px;
+	background-color: #888;
+	}
+	
+	/*   footer   */
+	.footer p{
+	text-align: center;
+	}
+
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+<div class="header">
+<div class="header-wrapper">
+
+<a href="http://www.baidu.com" title="快看，这是一个logo!"><div class="logo"></div></a>
+	
+<div class="firstnav">
+<ul id="menu">
+<li id="a"><a href="new.html">首页</a></li>
+<li id="b"><a href="new.html">hello</a></li>
+<li id="c"><a href="new.html">world</a></li>
+<li id="d"><a href="new.html">!!!!</a></li>
+<li id="e"><a href="new.html">ranranran</a></li>
+</ul>
+</div>
+
+<div class="search">
+<form>
+<input type="text" class="search-con" value="请输入搜索内容">
+<input class="search-img" type="image" src="search.jpg" style = "vertical-align:middle;" >
+</form>
+</div>
+
+<div class="secondnav">
+<ul>
+<li id="f"><a href="/f.asp">留言</a></li>
+<li id="g"><a href="/g.asp">帮助</a></li>
+<li id="h"><a href="/h.asp">留言</a></li>
+<li id="i"><a href="/i.asp">帮助</a></li>
+<li id="j"><a href="/j.asp">留言</a></li>
+<li id="k"><a href="/k.asp">帮助</a></li>
+<li id="l"><a href="/l.asp">留言</a></li>
+<li id="m"><a href="/m.asp">帮助</a></li>
+<li id="n"><a href="/n.asp">留言</a></li>
+<li id="o"><a href="/o.asp">帮助</a></li>
+<li id="p"><a href="/p.asp">留言</a></li>
+<li id="q"><a href="/q.asp">帮助</a></li>
+</ul>
+</div>
+
+<div class="thirdnav">
+<ul>
+<li id="r"><a href="/r.asp">注册</a>
+<a href="/b.asp">登陆</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+	
+<div class="content">
+<div class="subnav">
+
+<div class="subnav-first">
+<ul>
+<li ><a href="/new.html">一二三四五</a></li>
+<li ><a href="/new.html">上山打</a></li>
+<li ><a href="/new.html">老虎不在家</a></li>
+<li ><a href="/new.html">打到小松鼠</a></li>
+<li ><a href="/new.html">五</a></li>
+</ul>
+</div>
+
+<div class="subnav-second">
+<p>关注微信</br>
+<img src="logo.jpg" width="100px" height="100px" alt="logo"/></p>
+</div>
+</div>
+		
+        <div class="main">
+				<div class="sidebar">
+		<div class="side-first">
+			<h1>七天热门</h1>
+			
+			<a href="http://www.baidu.com" target="view_window">
+			<img class="side-img" src="logo.jpg" width="75" height="75" alt="content1">
+			<h2>这是一个标题这是一个标题</h2>
+			<pre>1-24   阅读113</pre></a>
+		
+			<a href="http://www.baidu.com" target="view_window">
+			<img class="side-img" src="logo.jpg" width="75" height="75" alt="content1">
+			<h2>这是一个标题这是一个标题</h2>
+			<pre>1-24   阅读113</pre></a>
+			
+			<a href="http://www.baidu.com" target="view_window">
+			<img class="side-img" src="logo.jpg" width="75" height="75" alt="content1">
+			<h2>这是一个标题这是一个标题</h2>
+			<pre>1-24   阅读113</pre></a>
+			</div>
+			
+			<div class="side-second">
+			<h1>热门话题</h1>
+			<table width="300px">
+			<tr>
+				<td>国家</td><td>国家</td><td>国家</td>
+			</tr>
+			<tr>
+				<td>摄影</td><td>摄影</td><td>摄影</td>
+			</tr>
+			<tr>
+				<td>绘画</td><td>绘画</td><td>绘画</td>
+			</tr>
+			<tr>
+				<td>绘画</td><td>绘画</td><td>绘画</td>
+			</tr>
+			<tr>
+				<td>国家</td><td>国家</td><td>国家</td>
+			</tr>
+			<tr>
+				<td>摄影</td><td>摄影</td><td>摄影</td>
+			</tr>
+			<tr>
+				<td>绘画</td><td>绘画</td><td>绘画</td>
+			</tr>
+			<tr>
+				<td>绘画</td><td>绘画</td><td>绘画</td>
+			</tr>
+			</table>
+			</div>
+			
+			<div class="side-third">
+			<h1>特别推荐</h1>
+			
+			<a href="http://www.baidu.com" target="view_window">
+			<img class="side-img" src="logo.jpg" width="75" height="75" alt="content1">
+			<h2>这是一个标题这是一个标题</h2>
+			<pre>1-24   阅读113</pre></a>
+		
+			<a href="http://www.baidu.com" target="view_window">
+			<img class="side-img" src="logo.jpg" width="75" height="75" alt="content1">
+			<h2>这是一个标题这是一个标题</h2>
+			<pre>1-24   阅读113</pre></a>
+			
+			<a href="http://www.baidu.com" target="view_window">
+			<img class="side-img" src="logo.jpg" width="75" height="75" alt="content1">
+			<h2>这是一个标题这是一个标题</h2>
+			<pre>1-24   阅读113</pre></a>
+			</div>
+			</div>
+            <!-- the s content goes here-->
+			<div class="maincon">
+			<h1>最新发布</h1>
+			
+			<div class="con">
+			<p><a href="http://www.baidu.com" target="view_window">
+			<img class="con-img" src="logo.jpg" width="150" height="150" alt="content1"></a>
+			
+			<a href="http://www.baidu.com" target="view_window">
+			<h2>这是一个标题这是一个标题</h2></a>
+			<p>这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字
+			这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这
+			是一段文字这是一段文字这是一段文字这是一段文字这是一段文字</p>
+			
+			<p><a href="http://www.baidu.com">
+			<img class="con-button" src="zan.jpg" width="100" height="30" alt="button1"></a>
+			</div>
+			
+				<div class="con">
+			<p><a href="http://www.baidu.com" target="view_window">
+			<img class="con-img" src="logo.jpg" width="150" height="150" alt="content1"></a>
+			
+			<a href="http://www.baidu.com" target="view_window">
+			<h2>这是一个标题这是一个标题</h2></a>
+			<p>这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字
+			这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这
+			是一段文字这是一段文字这是一段文字这是一段文字这是一段文字</p>
+			
+
+			<p><a href="http://www.baidu.com">
+			<img class="con-button" src="zan.jpg" width="100" height="30" alt="button1"></a>
+			</div>
+			
+				<div class="con">
+			<p><a href="http://www.baidu.com" target="view_window">
+			<img class="con-img" src="logo.jpg" width="150" height="150" alt="content1"></a>
+			
+			<a href="http://www.baidu.com" target="view_window">
+			<h2>这是一个标题这是一个标题</h2></a>
+			<p>这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字<hr/>
+			这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这
+			是一段文字这是一段文字这是一段文字这是一段文字这是一段文字</p>
+			
+			<p><a href="http://www.baidu.com">
+			<img class="con-button" src="zan.jpg" width="100" height="30" alt="button1"></a>
+			</div>
+			
+			<div class="con">
+			<p><a href="http://www.baidu.com" target="view_window">
+			<img class="con-img" src="logo.jpg" width="150" height="150" alt="content1"></a>
+			
+			<a href="http://www.baidu.com" target="view_window">
+			<h2>这是一个标题这是一个标题</h2></a>
+			<p>这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字
+			这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这
+			是一段文字这是一段文字这是一段文字这是一段文字这是一段文字</p>
+			
+			<p><a href="http://www.baidu.com">
+			<img class="con-button" src="zan.jpg" width="100" height="30" alt="button1"></a>
+			</div>
+			<div class="footer">
+			<p>@宁旭冉冉冉冉冉出品</p>
+			</div>
+			</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
