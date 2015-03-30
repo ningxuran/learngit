@@ -1,0 +1,211 @@
+   *{
+		margin: 0 auto;
+		padding: 0;
+		border: 0;
+	}
+	body{
+		font-family: '微软雅黑';
+		font-size: 15px;
+		min-width:1000px;
+	}
+	
+	/*
+		导航
+	*/
+	.nav .menu li{
+	float:left;
+	display: block;
+	font-size: 15px;
+	text-align:center;
+	text-decoration:none;
+	list-style-type: none;
+	}
+	.movie,.cinema,.mine{
+	width: 31%;
+	padding: .7%;
+	}
+	.nav .menu li.active{
+	color: red;
+	border-bottom:solid 2px red;
+	}
+	/*
+		轮换图
+	*/
+	.rotate{
+	position: relative;
+	width:400%;
+	overflow: hidden;
+	}
+	#rotate-img{
+	-webkit-transition-duration: 0.6s;
+	transition-duration: 0.6s;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	transform: translate3d(0px, 0px, 0px);
+	}
+
+	#rotate-img li{
+	list-style: none;
+	float:left;
+	}
+	#rotate-img img{
+	width: 1349px;
+	}
+	
+	#icoBox{
+	position: absolute;
+	bottom: 10px;
+	left: 1250px;
+	display: block;
+	}
+	#icoBox li{
+	margin: 0 5px;
+	width: 7px;
+	height: 7px;
+	display: inline-block;
+	background-color: rgba(8,8,8,.4);
+	cursor: pointer;
+	-moz-border-radius: 50px; 
+    -webkit-border-radius: 50px; 
+    border-radius: 50px;
+	list-style: none;	
+	text-indent: -2000px; 
+	}
+	#icoBox .active{
+	background-color: red;
+	}
+	
+	/*
+		内容
+	*/
+	.title{
+	width: 100%;
+	height: 10px;
+	padding: 3px 10px;
+	color: rgba(8,8,8,.7);
+	}
+	.movie-con{
+	padding:15px;
+	border-bottom: 1px solid rgba(8,8,8,.2);
+	}
+	.movie-img{
+	float:left;
+	}
+	.movie-img img{
+	width:68px;
+	height:98px;
+	}
+	.movie-intro{
+	margin-left:83px;
+	}
+	.point{
+	float:right;
+	font-size:17px;
+	color:red;
+	}
+	.movie-name{
+	float:left;
+	margin-right:10px;
+	color: #000; 
+	text-decoration: none;
+	}
+	.charac{
+	font-size: 13px;
+	color: #fff;
+	}
+	.max{
+	margin: 0 1px;
+	padding:0 2px;
+	background-color: #00BFFF;
+	-moz-border-radius: 3px; 
+    -webkit-border-radius: 3px; 
+    border-radius: 3px;
+	}
+	.new{
+	margin: 0 1px;
+	padding:1px 2px;
+	background-color: #FFB90F;
+	-moz-border-radius: 3px; 
+    -webkit-border-radius: 3px; 
+    border-radius: 3px;
+	}
+	.movie-detail{
+	margin-top: 25px;
+	color: rgba(8,8,8,.5);
+	white-space:nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	}
+	.movie-detail p{
+	margin:.9px 0;
+	}
+	a:link{
+	text-decoration: none;
+	}
+
+	
+	/*
+		qingchufudong
+	
+	.charac:after     
+	{    
+		visibility:hidden;    
+		display:block;    
+		font-size:0;    
+		content:".";    
+		clear:both;    
+		height:0;    
+	}  
+	.charac   
+	{    
+		zoom:1;    
+	}  
+
+	/*
+		加载
+	*/
+	#more{
+	padding:10px;
+	text-align: center;
+	font-size: 15px;
+	color:red;
+	}
+	#more img{
+	vertical-align: middle;
+	}
+	
+	/*
+		more movie
+	*/
+	
+	#more-movie{
+	display: none;
+	}
+	
+	/*
+		footer
+	*/
+	.footer{
+	padding:30px;
+	background-color: rgba(8,8,8,.1);
+	}
+	.btn-login,.btn-register,.btn-city{
+	margin: 5px;
+	padding: 9px 21px;
+	background-color: #fff;
+	color: rgba(8,8,8,.7);
+	}
+	.btn-city{
+    float: right;
+	margin: -10px 0 0 0;
+	}
+	.btn-city img{
+	vertical-align: middle;
+	}
+	.foot{
+	margin: 20px 0;
+	text-align: center;
+	line-height:30px;
+	}
+	.foot a{
+	color: red;
+	}

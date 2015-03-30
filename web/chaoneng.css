@@ -1,0 +1,101 @@
+   *{
+		margin: 0 auto;
+		padding: 0;
+		border: 0;
+	}
+	body{
+		font-family: '微软雅黑';
+		font-size: 15px;
+		min-width: 1000px;
+	}
+	/*
+		
+	*/
+	.header{
+	width: 100%;
+	height: 57.8em;
+	background: url(img/header.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	}
+	
+	.desc{
+	width: 100%;
+	height: 57.8em;
+	background-image: url(img/desc.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	}
+	
+	.actors{
+	width: 100%;
+	height: 64.8em;
+	background-image: url(img/actors.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	}
+	
+	.buy1{
+	width: 100%;
+	height: 15.4em;
+	background-image: url(img/buy1.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	}
+	
+	.feature1{
+	width: 100%;
+	height: 57.8em;
+	background-image: url(img/feature1.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	}
+	
+	.feature2{
+	width: 100%;
+	height: 109em;
+	background-image: url(img/feature2.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	}
+	
+	.buy2{
+	width: 100%;
+	height: 15.4em;
+	background-image: url(img/buy2.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	}
+	
+	.promo1{
+	width: 100%;
+	height: 50em;
+	background-image: url(img/promo1.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	}
+	
+	.promo2{
+	width: 100%;
+	height: 42em;
+	background-image: url(img/promo2.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	}
+	
+	.promo3{
+	width: 100%;
+	height: 46em;
+	background-image: url(img/promo3.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	}
+	
+	.buy-button{
+	position: relative;
+	top: 2em;
+	left: 1em;
+	width: 38em;
+	height: 10rem;
+	display: block;
+	}
