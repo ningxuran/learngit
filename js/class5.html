@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="ningxuran"/>
+<meta name="description"
+content="实现对DOM进行CSS样式类的设置"/>
+<title>5</title>
+
+<script>
+	
+	function hasClass(element,value){
+		var params = value.split(/\s+/);
+		for(var i=0;i<params.length;i++){
+			if(element.className.indexOf(params[i])>0){
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	function addClass(element,value){  
+		if(!element.className){            
+			element.className=value;
+		}else if(!hasClass(element,value)){
+			element.className += " " + value;
+		}else{
+			var params = value.split(/\s+/);
+			for(var i=0;i<params.length;i++){
+			if(element.className.indexOf(params[i])<0){
+				element.className += " " + params[i];
+			}
+		}
+		}
+	}
+	function removeClass(element,value){
+		if(hasClass(element,value)){
+			var params = value.split(/\s+/);
+			for(var i=0;i<params.length;i++){
+			if(element.className.indexOf(params[i])>0){
+				element.className = elementclassName.replace(params[i],"");
+			}
+		}
+	}
+	
+</script>
+
+
+</head>
+<body>
+</body>
+</html>
+

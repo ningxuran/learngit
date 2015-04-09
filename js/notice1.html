@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="ningxuran"/>
+<meta name="description"
+content="实现一个自定义事件处理对象notice，或者称为消息中心对象"/>
+<title>1</title>
+
+<script language="JavaScript" type="text/JavaScript">
+var notice = {
+	events:{},
+	on : function(sh,sf){
+		if (typeof this.events[sh] === "undefined") {
+            this.events[sh] = [];
+        }
+        if (typeof sf === "function") {
+           this.events[sh].push(sf);
+        }    
+        return this;
+	},
+	send : function(message){
+	    var event = this.events[message];
+        if (event instanceof Array) {
+            for (var i=0, length=event.length; i<length; i+=1) {
+                if (typeof event[i] === "function") {
+                    event[i]({ sh: message });    
+                }
+            }
+        }    
+        return this;
+	}
+}
+//测试
+notice.on("alert", function () {
+    alert("tanchu");
+});
+notice.on("alert", function () {
+    alert("tanchu2");
+});
+notice.send("alert");
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

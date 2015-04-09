@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="ningxuran"/>
+<meta name="description"
+content="实现一个简单的router，通过url可以找到相应的Action"/>
+<title>3</title>
+<script type="text/javascript">
+function url1(){
+	var str = (location.hash.length>0?locaion.hash.substring(1):""),
+	func,
+	params;
+	
+    index=str.indexOf("/");
+    if(index>0){
+		func=str.substring(0,index);
+        str=str.substr(index+1);
+        params=str.split("/");
+	}
+	else{
+		func = str;
+		var params={};
+	}
+	//执行
+	func = func+"(";
+	for(var i=0;i<params.length;i++){
+		if(i == (params.length-1)){
+		func=(func + params[i]);
+		
+		}else{
+		func=(func + params[i]+",");
+		}
+    }
+	func=(func+ ")");
+	eval(func); 
+}
+</script>
+</head>
+<body>
+</body>
+</html>
+

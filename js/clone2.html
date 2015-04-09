@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="ningxuran"/>
+<meta name="description"
+content="利用了递归，实现了深度克隆"/>
+<title>clone</title>
+
+<script language="JavaScript" type="text/JavaScript">
+function clone(a){
+	var b;
+	if(typeof a == "object"){
+		if (a == null){
+			b = null;
+		}else if(a instanceof Array){
+			b=[];
+			for (var i = 0,len = a.length; i < len; i++) {
+				b.push(clone(a[i]));
+			}
+		}else{
+		b={};
+		for(var j in a){
+			b[j]=clone(a[j]);
+		}
+		}
+	}else{
+	b = a;
+	}
+	return b;
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

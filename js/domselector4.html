@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="ningxuran"/>
+<meta name="description"
+content="实现一个简单的DOM选择器"/>
+<title>4</title>
+
+</head>
+<body>
+<div id="dom1" class="style1">
+</div>
+<p class="style1 style2"></p>
+
+</body>
+<script>
+
+
+function $(value){
+	var element=[];
+	if(value.indexOf("#")>-1){
+		element= document.getElementById(value.substring(1));
+		return element;
+	}else if(value.indexOf(".")>-1){
+		var params = value.split(/\s+/);
+		var eles=document.getElementsByTagName('*');
+		for(var i=0;i<eles.length;i++){
+			var count=0;
+			for(var j=0;j<params.length;j++){
+				if(eles[i].className.indexOf(params[j].substring(1))>-1){
+					count++;
+				}
+			}
+			if(count==params.length){
+				element.push(eles.item(i));
+			}
+		}
+		return element;
+	}
+	
+}
+</script>
+</html>
+
