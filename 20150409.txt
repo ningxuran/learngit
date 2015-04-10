@@ -1,0 +1,151 @@
+HTML:
+1.html5和html4的区别：
+Answer:
+1）简化的语法:例如doctype的声明，只需要写<!doctype html>。Html5与xthml1兼容；
+2）<canvas>标签代替了flash；
+3）新增<header><footer><section><article>标签，有利于清晰化网页结构；
+4）新增<menu><figure>标签
+5）对<form>和<forminput>标签进行了大量修改，添加了许多新的属性；
+6）删除<b><font><frame><center><big>标签
+2.<ul><ol>区别
+Answer:
+ul:unordered list定义无序列表
+ol:ordered list的意思，定义有序列表
+ul与ol前的符号是可以修改的，只需要修改它们的type值：
+ul的type属性有：disc—实心圆(默认）、circle—空心圆、square—实心方块；
+ol的type属性有：1—数字（默认）、a—小写字母、A—大写字母、i—小写希腊字母、I—大写希腊字母；
+通过CSS也可以在将它们前的符号改为图片。
+3.<div><p>区别
+Answer:
+<div> 可定义文档中的分区或节，可以把文档分割为独立的、不同的部分；它可以用作严格的组织工具，并且不使用任何格式与其关联。更重要的意义是在网页的动态实现过程中，对划分的区域统一处理，例如换背景色、字体等。<div> 是一个块级元素。它的内容自动地开始一个新行。实际上，换行是 <div> 唯一格式上的表现。
+<p>代表一个段落，对于在<p>与</p>之间的内容，当作一个段落统一处理，同样具有格式上的换行效果。
+4.<a>标签用途，链接写法
+Answer:
+用来设置超链接，用法：<a href=””></a>
+5.Html语义化什么意思：
+Answer:
+我所理解的html语义化就是根据内容本身的语义去选择标签，将其本身的语义合理得表述出来，这样写出来的容易阅读，也能够让网页尽可能得被机器所理解。
+优点：
+先将内容语义化表出，再为不同的用户代理设计不同的样式描述，就能够进行内容与样式的分离；
+当因为一些原因去掉或者样式丢失的时候，页面依然能够呈现清晰的结构；
+便于团队开发和维护在团队中大家都遵循同一个标准，可以减少很多差异化的东西，方便开发和维护，提高开发效率；
+便于搜索引擎索引网站的内容。
+缺点：
+html标签可能还不足以表达所有可能的语义，有的时候也需要增加一些额外的代码。
+要做到语义化：
+首先，要理解所要表达的内容；
+再者，使用合适的标签；
+如：<h> 作为标题使用，并且依据重要性递减；<p> 作为段落；<em>、<strong> 强调等。
+其次，根据内容的意义来做ID和Class的命名。
+HTML+CSS：
+6.左侧固定，右侧自适应
+Answer:
+方法1：
+左侧浮动float:left，右侧设置margin-left;
+方法2：
+左侧绝对定位position:absolute；右侧设置margin-left;
+方法3：
+左侧float:left；
+右侧容器设置为100%，float:right;margin-right为左侧宽度的负值；容器内元素设置为margin-right左侧宽度正值；
+方法4：
+把wrap设为display:table并指定宽度100%,然后把两侧均设为display:table-cell;然后只给左侧指定一个宽度，那么右侧的宽度就变成自适应了。
+7.左固定，右侧固定，中间自适应
+Answer:
+方法1：
+左侧：float:left；右侧：float:right；中间设置：margin-left,margin-right；
+方法2：
+左右两侧采用绝对定位，中间同样采用margin-left,margin-right的方法；
+8.固定宽度居中：
+Answer:
+1）margin:0 auto；text-align:center；
+2）#wrap { position:relative; width:100px; left:50%; margin-left:-50px }
+9.Css选择器：
+Answer:
+1) .class   
+2) #id     
+3) *    
+4)element   
+5)element,element    
+6)element element
+7)element>element
+8)element+element
+9)attribute
+10)attribute=value
+11):link、:visited、:active、:hover、:hover、:focus
+12):first-letter、:first-line、:first-child
+13):berfore、:after
+10. .classa [space].classb和.classa.classb的区别：
+Answer:
+前者为选择class name为classa元素内部的素有class name为classb的元素；
+后者为class name里包含classa 和classb的元素
+11.Position的值都有哪些，relative和absolute的区别：
+Answer:
+值：absolute、fixed、relative、static、inherit
+区别：
+absolute:生成绝对定位的元素，相对于static定位以外的第一个父元素进行定位；
+relative:生成相对定位的元素，相对于其正常位置定位。
+12.两个元素Width:100px;float:left; 其中右边元素position:relative;left:-100px:
+Answer:
+右边元素向左移动100px;
+13.文档流是指什么
+Answer:
+将窗体自上而下分成一行行，并在每行中按从左至右的顺序排放元素，即为文档流。每个非浮动块级元素都独占一行，浮动元素则按规定浮在行的一端。若当前行容不下，则另起新行再浮动。有三种情况将使得元素脱离文档流而存在，分别是浮动，绝对定位，固定定位。但是在IE中浮动元素也存在于文档流中。
+14.清除浮动
+Answer:
+.clearfix:after     
+{    
+visibility:hidden;    
+display:block;    
+font-size:0;    
+content:".";    
+clear:both;    
+height:0;    
+}  
+.clearfix   
+{    
+zoom:1;    
+}  
+原理：使用 :after 伪类在浮动块后面加上一个非 display:none 的不可见块状内容来，并给它设置 clear:both 来清理浮动。在 ie6 和 7 中给浮动块添加 haslayout 来让浮动块撑高并正常影响文档流。
+15.clear:both和clear:right的区别
+Answer:
+both:两侧均不允许浮动元素
+right:右侧不允许浮动元素
+16.盒模型
+Answer:
+举例说明：
+.content{
+width:300px;
+height:200px;
+padding:10px;
+border:1px solid;
+margin:15px;
+}
+以上元素被计算出来的尺寸是：
+Width = (15 + 1 + 10)*2 + 300 = 352px
+Height = (15 + 1 + 10)*2 +200 = 252px
+JS：
+17.JS数据类型
+Answer:
+undefined、null、boolean、number、string、object
+18.值类型和引用类型的区别
+Answer:
+1）值类型：数值、布尔值、null、undefined
+2）引用类型：对象、数组、函数
+值类型的变量直接保存变量值；引用变量却持有的引用(可比较c/c++的指针，一把"钥匙"),通过引用可以迅速找到存储内容的内存区域。
+ 值类型一般是一些固定的字节大小的；引用类型往往存储数组，对象，函数这些实现很难知道占据内存大小的量。
+19.怎么判断数组
+Answer:
+arr instanceof Array
+isArray(ECMAScript5新增)
+20.作用域问题
+For(var i =0;....){
+//sth i=10
+}
+i=?
+Answer:
+在javascript里没有块级作用域，i=10。
+
+
+
+
+
